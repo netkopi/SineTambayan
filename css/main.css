@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 986px;
+    margin: 0 auto;
+}
+
+.hero {
+    border-radius: .5em;
+    border: none;
+    height: 90vh;
+}

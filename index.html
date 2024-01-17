@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X stream</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container nav">
+            <div class="logo">X stream</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a href="#">Favorites</a></li>
+                    <li><div class="dd">
+                        <span class="dd-btn">Categories</span>
+                        <ul class="dd-content">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Drama</a></li>
+                            <li><a href="#">Comedy</a></li>
+                            <li><a href="#">Fantasy</a></li>
+                        </ul>
+                    </span></li>
+                </ul>
+
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button>SEARCH</button>
+            </div>
+
+            <nav class="call-to-action">
+                <ul>
+                    <li class="log-in"><a href="#">Log in</a></li>
+                    <li class="sign-up"><a href="#">Create an account</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-open">
+                <input type="checkbox" id="open" hidden>
+                <label for="open">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </label>
+            </div>
+
+            <div class="sidebar" id="sidebar">
+
+                <div class="sidebar-close">
+                    <input type="checkbox" id="close" hidden>
+                    <label for="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                        </svg>
+                    </label>
+                </div>
+
+                <nav>
+                    <div class="search-bar">
+                        <input type="text">
+                        <button>SEARCH</button>
+                    </div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Watchlist</a></li>
+                        <li><a href="#">Favorites</a></li>
+                        <li><div class="dd">
+                            <span class="dd-btn">Categories</span>
+                            <ul class="dd-content">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Drama</a></li>
+                                <li><a href="#">Comedy</a></li>
+                                <li><a href="#">Fantasy</a></li>
+                            </ul>
+                        </span></li>
+                    </ul>
+    
+                </nav>
+                <nav class="call-to-action">
+                    <ul>
+                        <li class="log-in"><a href="#">Log in</a></li>
+                        <li class="sign-up"><a href="#">Create an account</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+            <iframe src="src/pages/main.html" frameborder="0"></iframe>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
