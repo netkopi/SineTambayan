@@ -14,3 +14,8 @@ closeBtn.addEventListener('change', () => {
         openBtn.checked = false;
     }
 });
+
+
+
+
+// Hero Image //

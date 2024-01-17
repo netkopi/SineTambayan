@@ -48,13 +48,24 @@ body {
     border-radius: .3em;
 }
 
-img {
+.hero img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     z-index: -1;
+    animation-name: fadein;
+    animation-direction: linear;
+    animation-duration: 1s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 740px){
