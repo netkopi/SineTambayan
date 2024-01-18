@@ -48,9 +48,8 @@ setInterval(() => {
     imgElem.src = heroImages[index].source;
 
 
-    dots.forEach(dot => {
+    dots.forEach((dot) => {
         dot.style.width = '.5rem';
-
     });
     dots[index].style.width = '2rem';
 
@@ -61,4 +60,12 @@ setInterval(() => {
         index = 0;
     }
     hero.appendChild(imgElem);
-}, 3000);
+}, 2500);
+
+dots.forEach((dot, i) => {
+    
+    dot.addEventListener('click', () => {
+        index = i;
+    });
+
+});
