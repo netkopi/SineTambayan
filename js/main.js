@@ -25,6 +25,7 @@ const heroImages = [
 
 // Hero Images //
 const hero = document.getElementById('hero');
+const dots = document.querySelectorAll('.dot');
 
 let index = 0;
 setInterval(() => {
@@ -33,10 +34,18 @@ setInterval(() => {
     imgElem.style.animationName = 'fadein';
     imgElem.style.animationName = '';
     imgElem.src = heroImages[index].source;
+
+    dots[index].style.width = '2rem';
+    if(!dots[index]){
+        dots.style.width = '.5rem';
+    };
+
     index += 1;
     if(index > heroImages.length - 1){
         imgElem.src = 'https://m.media-amazon.com/images/M/MV5BODY4OWM5M2UtM2Y1Yi00YjAyLTlhMDktMDkzZjFmMjI5MmI5XkEyXkFqcGdeQXVyMTA1NjQyNjkw._V1_SX300.jpg';
         index = 0;
     }
     hero.appendChild(imgElem);
+
+
 }, 3000);
