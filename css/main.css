@@ -4,10 +4,24 @@
     box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     font-size: 1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+
+.bg-color-1 {
+    background-color: rgb(19, 19, 34);
+}
+
+
+
+
+
 
 .container {
     width: 100%;
@@ -21,7 +35,7 @@ body {
     border: none;
     height: 90vh;
     margin: 1em auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .hero-inner {
     position: absolute;
@@ -46,6 +60,9 @@ body {
     animation-name: fadein;
     animation-duration: .5s;
     animation-timing-function: ease-out;
+}
+.text span {
+    font-weight: 1000;
 }
 .text p {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -150,11 +167,112 @@ body {
 
 
 
+
+.featured-movies {
+    margin-top: 50px;
+    padding: 50px 1rem;
+}
+.featured-movies h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.movies {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.movie {
+    position: relative;
+    width: 18rem;
+    border: none;
+    overflow: hidden;
+}
+.movie img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    z-index: 1;
+    transition: scale .5s ease-in-out;
+}
+.movie:hover > img {
+    scale: 1.5;
+}
+.movie .actions {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000cc;
+    z-index: 2;
+    transition: bottom .5s ease-in-out;
+}
+.movie:hover > .actions {
+    bottom: 0%;
+}
+.movie .watch {
+    font-size: 1.25rem;
+    width: 65%;
+    bottom: 5%;
+    left: 5%;
+}
+.movie .favorite {
+    width: 20%;
+    right: 5%;
+    bottom: 5%;
+}
+.watch, .favorite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 15%;
+    border: solid #fff;
+    border-radius: .5em;
+    color: #fff;
+    background-color: transparent;
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out; 
+    
+}
+.favorite:hover, .watch:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
 @media (max-width: 740px){
     .hero {
         height: 50vh;
     }
     .text h1 {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px){
+    .text {
+        width: 90%;
+        gap: 0;
+        align-items: start;
+    }
+    .text p {
+        width: 60%;
+        text-align: left;
+        margin: 0;
+    }
+    .text button {
+        margin: 10px 0;
+        border-width: 1px;
+    }
+    .text h1 {
+        text-align: left;
     }
 }

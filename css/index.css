@@ -280,6 +280,19 @@ main iframe {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 480px){
     .nav {
         width: 90%;
@@ -290,25 +303,6 @@ main iframe {
     .sidebar nav ul {
         gap: .3em;
     }
-/*     .search-bar {
-        display: none;
-    }
-    .sidebar .search-bar {
-        display: flex;
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        margin: 0 0 10px 0;
-    }
-    .sidebar .search-bar input {
-        width: 70%;
-        height: 100%;
-    }
-    .sidebar .search-bar button {
-        width: 30%;
-        height: 100%;
-    } */
-
     .dd .dd-content {
         position: relative;
     }
