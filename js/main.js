@@ -24,17 +24,19 @@ const heroImages = [
 
 
 // Hero Images //
-
-const heroImg = document.getElementById('hero-img');
+const hero = document.getElementById('hero');
 
 let index = 0;
 setInterval(() => {
-    heroImg.style.animationName = 'fadein';
-    heroImg.style.animationName = '';
-    heroImg.src = heroImages[index].source;
+    const imgElem = document.createElement('img');
+    imgElem.style.position = 'absolute';
+    imgElem.style.animationName = 'fadein';
+    imgElem.style.animationName = '';
+    imgElem.src = heroImages[index].source;
     index += 1;
     if(index > heroImages.length - 1){
-        heroImg.src = 'https://m.media-amazon.com/images/M/MV5BODY4OWM5M2UtM2Y1Yi00YjAyLTlhMDktMDkzZjFmMjI5MmI5XkEyXkFqcGdeQXVyMTA1NjQyNjkw._V1_SX300.jpg';
+        imgElem.src = 'https://m.media-amazon.com/images/M/MV5BODY4OWM5M2UtM2Y1Yi00YjAyLTlhMDktMDkzZjFmMjI5MmI5XkEyXkFqcGdeQXVyMTA1NjQyNjkw._V1_SX300.jpg';
         index = 0;
     }
+    hero.appendChild(imgElem);
 }, 3000);
