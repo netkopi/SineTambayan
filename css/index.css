@@ -33,7 +33,7 @@ header {
 header .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -105,36 +105,22 @@ nav a:hover {
 
 
 .search-bar {
+    position: relative;
     display: flex;
     align-items: center;
-    width: 30%;
-    gap: .5em;
-}
-.search-bar input {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 300;
-    width: 70%;
-    height: 100%;
-    border: 1px solid #a0a0a0;
-    padding: .5em;
+    width: 20%;
     background-color: transparent;
-    color: #fff;
-}
-.search-bar input::placeholder {
-    font-size: 1rem;
-    font-weight: 300;
-}
-.search-bar button {
-    font-size: .8rem;
-    color: #fff;
-    background-color: transparent;
-    width: 30%;
-    height: 100%;
-    padding: .6em;
-    background-color: green;
-    border: solid green;
+    border: solid #a0a0a0;
+    border-radius: 1em;
+    padding: 1em;
     cursor: pointer;
 }
+.search-bar svg {
+    position: absolute;
+    right: 1em;
+    color: #fff;
+}
+
 
 
 
@@ -148,13 +134,14 @@ nav a:hover {
     color: white;
 }
 .call-to-action .sign-up {
-    background-color: green;
+    background-color: #880000;
     padding: .5em;
-    border: solid green;
-    transition: box-shadow .3s ease-in-out;
+    border: solid #880000;
+    transition: box-shadow .3s ease-in-out, scale .3s ease-in-out;
 }
 .call-to-action .sign-up:hover {
-    box-shadow: 0 0 10px 5px hsl(120, 100%, 25%, .8);
+    box-shadow: 0px 5px 10px 0px #610000cc;
+    scale: 1.02;
 }
 .call-to-action .log-in {
     background-color: transparent;
@@ -167,7 +154,7 @@ nav a:hover {
     background-color: #fff;
 }
 .call-to-action .log-in:hover a {
-    color: green;
+    color: #000;
 }
 
 
@@ -194,31 +181,30 @@ main iframe {
 }
 
 
+@media (max-width: 900px){
+    .search-bar {
+        width: 5%;
+        border: none;
+    }
+    .search-bar svg {
+        right: -1em;
+    }
+}
 
 
 
 
 
-
-@media (max-width: 960px){
+@media (max-width: 780px){
     nav {
         display: none;
     }
-    .sidebar .search-bar {
-        display: none;
-    }
     .search-bar {
-        position: relative;
-        width: 50%;
-        overflow: hidden;
+        width: 80%;
+        right: 0;
     }
-    .search-bar input {
-        width: 100%;
-        height: 100%;
-    }
-    .search-bar button {
-        width: 30%;
-        height: 100%;
+    .search-bar svg {
+    right: 1em;
     }
     .sidebar-open {
         display: block;
@@ -304,7 +290,7 @@ main iframe {
     .sidebar nav ul {
         gap: .3em;
     }
-    .search-bar {
+/*     .search-bar {
         display: none;
     }
     .sidebar .search-bar {
@@ -321,7 +307,7 @@ main iframe {
     .sidebar .search-bar button {
         width: 30%;
         height: 100%;
-    }
+    } */
 
     .dd .dd-content {
         position: relative;
