@@ -35,7 +35,7 @@ body {
     border: none;
     height: 90vh;
     margin: 1em auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background: linear-gradient(to bottom, rgb(0 0 0 /  0.6), rgb(0 0 0 / 0.8));
 }
 .hero-inner {
     position: absolute;
