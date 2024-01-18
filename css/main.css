@@ -67,15 +67,13 @@ body {
     justify-content: center;
     gap: 1em;
 }
-/* .hero .dot:nth-child(2){
-    width: 2rem;
-} */
 .hero .dot {
     background-color: #fff;
     width: .5rem;
     height: .3rem;
     border-radius: 5px;
     border: none;
+    transition: width .5s ease-in-out;
 }
 @keyframes fadein {
     from {
