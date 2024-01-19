@@ -414,6 +414,20 @@ body {
         width: 100%;
         padding: 1rem 0;
     }
+    .feedback-container {
+        flex-direction: column;
+    }
+    .feedback-container .col-1, .col-2{
+        gap: 1rem;
+        width: 100%;
+    }
+    .feedback-container h1 {
+        width: 100%;
+        font-size: 2rem;
+    }
+    .feedback-container h3 {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 480px){
